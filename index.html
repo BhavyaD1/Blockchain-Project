@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Crypto Wallet</title>
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.8.2/dist/web3.min.js"></script>
+  <script src="app.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #0a0a0a;
+      color: white;
+      margin-top: 60px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      background: #29b6f6;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0288d1;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+    }
+    .container {
+      background: #1c1c1c;
+      padding: 30px;
+      border-radius: 15px;
+      width: 400px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>💰 Simple Crypto Wallet</h1>
+  <div class="container">
+    <button id="connectButton">🔗 Connect Wallet</button>
+    <p><b>Connected Account:</b> <span id="account">Not Connected</span></p>
+
+    <hr>
+    <h3>Contract Actions</h3>
+    <button id="balanceButton">Get Contract Balance</button>
+    <p id="balanceResult">Balance: -- ETH</p>
+
+    <input type="number" id="depositAmount" placeholder="Amount in ETH">
+    <button id="depositButton">Deposit ETH</button>
+
+    <input type="number" id="withdrawAmount" placeholder="Amount in ETH">
+    <button id="withdrawButton">Withdraw ETH</button>
+  </div>
+</body>
+</html>
